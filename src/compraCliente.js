@@ -1,16 +1,9 @@
-import { CaixaDaLanchonete } from './caixa-da-lanchonete';
+import { CaixaDaLanchonete } from "./caixa-da-lanchonete.js";
 
+const caixa = new CaixaDaLanchonete();
 
-const caixa = new CaixaDaLanchonete()
+const metodoDePagamento = ('dinheiro');
+const itensSelecionados = ['queijo,1ls'];
+const resultado = caixa.calcularValorDaCompra(metodoDePagamento, itensSelecionados);
 
-const itens = [
-    {codigo: 'cafe'},
-    {codigo: 'chantily', extra: 'cafe'},
-    {codigo: 'suco'},
-    {codigo: 'combo1'},
-];
-
-const metodoDePagamento = 'dinheiro';
-
-const valorTotal = caixa.calcularValorDaCompra(metodoDePagamento, itens);
-console.log(`valorTotal da compra: R$${valorTotal}`);
+console.log(resultado);
